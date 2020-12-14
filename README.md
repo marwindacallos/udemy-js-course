@@ -5,3 +5,5 @@ Even I'm already good to go for projects I still feel the impostor syndrome that
 Goal 1 Week.
 
 ## Checking Main
+
+And also I'm now going to use or some how adapt all I know, Scss, Git, and Javascript.
