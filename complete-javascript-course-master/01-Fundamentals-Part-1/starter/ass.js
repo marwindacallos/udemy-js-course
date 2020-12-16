@@ -1,3 +1,4 @@
+// ASSIGNMENT 1
 // Values and Variables
 
 let country = 'Philippines';
@@ -43,3 +44,15 @@ else {
 
 let description = 'Portugal is in Europe, and its 11 million people speak portugues'
 // console.log(description);
+
+// ASSIGNMENT 2 (STRINGS  AND TEMPLATE LITERALS)
+
+// console.log(`${country} is in ${continent}, and its ${phPopulation} million people speak ${language}`);
+
+// console.log('9' - '5'); //4
+// console.log('19' - '13' + '17'); //617
+// console.log(typeof('19' - '13' + '17')); //string
+// console.log('19' - '13' + 17); //23
+// console.log('123' < 57); //false
+// console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
+// console.log(typeof(5 + 6 + '4' + 9 - 4 - 2));  //number
