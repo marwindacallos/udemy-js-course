@@ -78,14 +78,14 @@ const year = 2037;
 
 // IF STATEMENTS
 
-const age = 15;
+// const age = 15;
 
-if (age >= 18){
- console.log('Srah can start driving license');
-} else{
- const yearsLeft = 18 - age;
- // console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
-}
+// if (age >= 18){
+//  console.log('Srah can start driving license');
+// } else{
+//  const yearsLeft = 18 - age;
+//  // console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
+// }
 
 
 const birthYear = 1908;
@@ -176,3 +176,75 @@ const inputYear = '1991';
  // console.log(hasDriversLicense && hasGoodVision && !isTired);
 
  // (26)THE SWITCH STATEMENT
+
+  const day = new(Date);
+  switch(day){
+   case 'monday':
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+   case 'tuesday':
+    console.log("Prepare theory videos");
+    break;
+   case 'wednesday':
+   case 'thursday':
+    console.log("Write code examples");
+    break;
+   case 'friday':
+    console.log("Record videos");
+    break;
+   case 'saturday':
+   case 'sunday':
+   console.log("Enjoy the weekends");
+    break;
+   // default:
+   //  console.log('Not a valid day!')
+  }
+
+  const dayz = 'yie';
+  if (dayz === 'monday'){
+   console.log(`Plan course structure
+   Go to coding meetup`)
+  }
+  else if (dayz === 'tuesday'){
+   console.log(`Prepare theory videos`)
+  }
+  else if (dayz === 'wednesday'|| dayz === 'thursday'){
+   console.log(`Write code examples`)
+  }
+  else if (dayz === 'friday'){
+   console.log(`Record videos`)
+  }
+  else if (dayz === 'saturday'|| dayz === 'sunday'){
+   console.log(`Enjoy the weekends`)
+  }
+  // else{
+  //  console.log('Not a valid day!')
+  // }
+  
+ // STATEMENT AND EXPRESSION
+ 3 + 4 // it's expression since it does produce value
+
+ if (23 > 10){
+  const str = '23 is bigger'; //it's statement since it's only statement
+ }
+
+ // The Conditional Ternary Operator using (?) as a conditional key
+
+ // const age = 51;
+ // age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink wine 💧');
+
+ // const drink = age >= 18 ? "wine 🍷" : "wine 💧";
+ // console.log(drink)
+
+ // let drink2;
+ // if(age >= 18){
+ //  drink2 = 'wine 🍷'
+ // } else{
+ //  drink2 = "wine 💧";
+ // }
+ // console.log(drink2)
+
+ //    // using template literal for ternary operator
+
+ // console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "wine 💧"}`)

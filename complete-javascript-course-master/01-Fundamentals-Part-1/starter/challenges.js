@@ -60,15 +60,15 @@
   const koalasAverage = (koalas1 + koalas2 + koalas3)/3;
   // console.log(koalasAverage)
 
-  if ((dolphineAverage > koalasAverage)&&(dolphineAverage >= 100)){
-   console.log(`Dolphine Wins a Trophy`);}
-   else if((dolphineAverage < koalasAverage)&&(koalasAverage >= 100)){
-    console.log(`Koalas Wins a Trophy`);
-   } else if((dolphineAverage === koalasAverage)||((koalasAverage >= 100)&&(dolphineAverage >= 100))){
-   console.log(`Draw`); 
-  } else{
-   console.log(`No one wins the trophy`);
-  }
+  // if ((dolphineAverage > koalasAverage)&&(dolphineAverage >= 100)){
+  //  console.log(`Dolphine Wins a Trophy`);}
+  //  else if((dolphineAverage < koalasAverage)&&(koalasAverage >= 100)){
+  //   console.log(`Koalas Wins a Trophy`);
+  //  } else if((dolphineAverage === koalasAverage)||((koalasAverage >= 100)&&(dolphineAverage >= 100))){
+  //  console.log(`Draw`); 
+  // } else{
+  //  console.log(`No one wins the trophy`);
+  // }
   // DATA 2
   const oneDolphin1 = 97;
   const oneDolphin2 = 112;
@@ -82,15 +82,15 @@
   const oneKoalasAverage = (oneKoalas1 + oneKoalas2 + oneKoalas3)/3;
   // console.log(oneKoalasAverage)
 
-  if ((oneDolphineAverage > oneKoalasAverage)&&(oneDolphineAverage >= 100)){
-   console.log(`Dolphine Wins a Trophy`);}
-   else if((oneDolphineAverage < oneKoalasAverage)&&(oneKoalasAverage >= 100)){
-    console.log(`Koalas Wins a Trophy`);
-   } else if((oneDolphineAverage === oneKoalasAverage)||((oneKoalasAverage >= 100)&&(oneDolphineAverage >= 100))){
-   console.log(`Draw`); 
-  } else{
-   console.log(`No one wins the trophy`);
-  }
+  // if ((oneDolphineAverage > oneKoalasAverage)&&(oneDolphineAverage >= 100)){
+  //  console.log(`Dolphine Wins a Trophy`);}
+  //  else if((oneDolphineAverage < oneKoalasAverage)&&(oneKoalasAverage >= 100)){
+  //   console.log(`Koalas Wins a Trophy`);
+  //  } else if((oneDolphineAverage === oneKoalasAverage)||((oneKoalasAverage >= 100)&&(oneDolphineAverage >= 100))){
+  //  console.log(`Draw`); 
+  // } else{
+  //  console.log(`No one wins the trophy`);
+  // }
   // DATA 3
   const twoDolphin1 = 97;
   const twoDolphin2 = 112;
@@ -104,12 +104,12 @@
   const twoKoalasAverage = (twoKoalas1 + twoKoalas2 + twoKoalas3)/3;
   // console.log(oneKoalasAverage)
 
-  if ((twoDolphineAverage > twoKoalasAverage)&&(twoDolphineAverage >= 100)){
-   console.log(`Dolphine Wins a Trophy`);}
-   else if((twoDolphineAverage < twoKoalasAverage)&&(twoKoalasAverage >= 100)){
-    console.log(`Koalas Wins a Trophy`);
-   } else if((twoDolphineAverage === twoKoalasAverage)||((twoKoalasAverage >= 100)&&(twoDolphineAverage >= 100))){
-   console.log(`Draw`); 
-  } else{
-   console.log(`No one wins the trophy`);
-  }
+  // if ((twoDolphineAverage > twoKoalasAverage)&&(twoDolphineAverage >= 100)){
+  //  console.log(`Dolphine Wins a Trophy`);}
+  //  else if((twoDolphineAverage < twoKoalasAverage)&&(twoKoalasAverage >= 100)){
+  //   console.log(`Koalas Wins a Trophy`);
+  //  } else if((twoDolphineAverage === twoKoalasAverage)||((twoKoalasAverage >= 100)&&(twoDolphineAverage >= 100))){
+  //  console.log(`Draw`); 
+  // } else{
+  //  console.log(`No one wins the trophy`);
+  // }
