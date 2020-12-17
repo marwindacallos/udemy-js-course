@@ -131,3 +131,5 @@ let description = 'Portugal is in Europe, and its 11 million people speak portug
   
   const myCountryNames = myCountry > 33 ? 'above' : 'below';
   console.log(`${myCountryName}'s population is ${myCountry > 33 ? 'above' : 'below'} average.`)
+  
+

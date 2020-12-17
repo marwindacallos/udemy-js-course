@@ -113,3 +113,12 @@
   // } else{
   //  console.log(`No one wins the trophy`);
   // }
+
+
+  // CODING CHALLENGE #4
+
+ const bill = 430;
+ const tip = 50 < bill > 300 ? (bill * .15) : (bill * .20);
+ // const tip = 50 <= bill && bill >= 300 ? (bill * .15) : (bill * .20);
+
+ console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`)
