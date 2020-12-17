@@ -18,12 +18,12 @@ isIsland = true;
 
 // LET CONST VAR
 
-let language = 'Filipino';
+// let language = 'Filipino';
 
 
 // console.log(language, firstName);
 
-language = 'English';
+// language = 'English';
 // console.log(language);
 
 // BASIC OPERATORS
@@ -70,8 +70,7 @@ let description = 'Portugal is in Europe, and its 11 million people speak portug
  //  console.log(`No borders`);
  // }
 
- // BOOLEAN LOGIC
- // !==, !=, !, &&, ||, ===, ==
+
 
  // ASSIGNMENT LOGICAL OPERATOS
  const island = true;
@@ -96,4 +95,39 @@ let description = 'Portugal is in Europe, and its 11 million people speak portug
 
 // ASSIGNMENT THE SWITCH STATEMENT
 
-// THE CONDITIONAL (TERNARY) OPERATOR
+// const language = 'english'
+// switch(language){
+//  case 'chinese':
+//  case 'mandarin':
+//   console.log(`MOST number of native speaker!`);
+//   break;
+//  case 'spanish':
+//   console.log(`2nd place in number of native speakers`);
+//   break;
+//  case 'english':
+//   console.log(`3rd place Yay!`);
+//   break;
+//  case 'hindi':
+//   console.log(`Ooh! We got 4th`);
+//   break;
+//  case 'arabic':
+//   console.log(`5th but not the least`);
+//   break;
+//  default:
+//   console.log(`Well at least it's a language`);
+//   break;
+// }
+
+// ASSIGNMENT THE CONDITIONAL (TERNARY) OPERATOR
+//  1. If your country's population is greater than 33 million, use the ternary operator
+// to log a string like this to the console: 'Portugal's population is above average'.
+// Otherwise, simply log 'Portugal's population is below average'. Notice how only
+// one word changes between these two sentences!
+// 2. After checking the result, change the population temporarily to 13 and then to
+// 130. See the different results, and set the population back to original
+  const myCountry = 106;
+  const myCountryName = 'Philippines';
+  myCountry > 33 ? console.log(`${myCountryName} population is above average.`) : console.log(`${myCountryName} population is below average.`)
+  
+  const myCountryNames = myCountry > 33 ? 'above' : 'below';
+  console.log(`${myCountryName}'s population is ${myCountry > 33 ? 'above' : 'below'} average.`)
