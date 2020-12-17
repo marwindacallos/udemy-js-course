@@ -45,3 +45,71 @@
   // console.log(`Mark's BMI is lower than John's,
   // Mark's BMI ${markBMI2} is lower than John's ${johnBMI2}`);
  }
+
+ // CODING CHALLENGE #3 (You don't need to write every data just the formula instead)
+
+  const dolphin1 = 96;
+  const dolphin2 = 108;
+  const dolphin3 = 89;
+  const dolphineAverage = (dolphin1 + dolphin2 + dolphin3)/3;
+  // console.log(dolphineAverage);
+ 
+  const koalas1 = 88;
+  const koalas2 = 91;
+  const koalas3 = 110;
+  const koalasAverage = (koalas1 + koalas2 + koalas3)/3;
+  // console.log(koalasAverage)
+
+  if ((dolphineAverage > koalasAverage)&&(dolphineAverage >= 100)){
+   console.log(`Dolphine Wins a Trophy`);}
+   else if((dolphineAverage < koalasAverage)&&(koalasAverage >= 100)){
+    console.log(`Koalas Wins a Trophy`);
+   } else if((dolphineAverage === koalasAverage)||((koalasAverage >= 100)&&(dolphineAverage >= 100))){
+   console.log(`Draw`); 
+  } else{
+   console.log(`No one wins the trophy`);
+  }
+  // DATA 2
+  const oneDolphin1 = 97;
+  const oneDolphin2 = 112;
+  const oneDolphin3 = 101;
+  const oneDolphineAverage = (oneDolphin1 + oneDolphin2 + oneDolphin3)/3;
+  // console.log(oneDolphineAverage);
+ 
+  const oneKoalas1 = 109;
+  const oneKoalas2 = 95;
+  const oneKoalas3 = 123;
+  const oneKoalasAverage = (oneKoalas1 + oneKoalas2 + oneKoalas3)/3;
+  // console.log(oneKoalasAverage)
+
+  if ((oneDolphineAverage > oneKoalasAverage)&&(oneDolphineAverage >= 100)){
+   console.log(`Dolphine Wins a Trophy`);}
+   else if((oneDolphineAverage < oneKoalasAverage)&&(oneKoalasAverage >= 100)){
+    console.log(`Koalas Wins a Trophy`);
+   } else if((oneDolphineAverage === oneKoalasAverage)||((oneKoalasAverage >= 100)&&(oneDolphineAverage >= 100))){
+   console.log(`Draw`); 
+  } else{
+   console.log(`No one wins the trophy`);
+  }
+  // DATA 3
+  const twoDolphin1 = 97;
+  const twoDolphin2 = 112;
+  const twoDolphin3 = 101;
+  const twoDolphineAverage = (twoDolphin1 + twoDolphin2 + twoDolphin3)/3;
+  // console.log(oneDolphineAverage);
+ 
+  const twoKoalas1 = 109;
+  const twoKoalas2 = 95;
+  const twoKoalas3 = 106;
+  const twoKoalasAverage = (twoKoalas1 + twoKoalas2 + twoKoalas3)/3;
+  // console.log(oneKoalasAverage)
+
+  if ((twoDolphineAverage > twoKoalasAverage)&&(twoDolphineAverage >= 100)){
+   console.log(`Dolphine Wins a Trophy`);}
+   else if((twoDolphineAverage < twoKoalasAverage)&&(twoKoalasAverage >= 100)){
+    console.log(`Koalas Wins a Trophy`);
+   } else if((twoDolphineAverage === twoKoalasAverage)||((twoKoalasAverage >= 100)&&(twoDolphineAverage >= 100))){
+   console.log(`Draw`); 
+  } else{
+   console.log(`No one wins the trophy`);
+  }

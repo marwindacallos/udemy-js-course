@@ -56,3 +56,44 @@ let description = 'Portugal is in Europe, and its 11 million people speak portug
 // console.log('123' < 57); //false
 // console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
 // console.log(typeof(5 + 6 + '4' + 9 - 4 - 2));  //number
+
+ // ASSIGNMENT EQUALITY OPERATORS
+
+ // const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
+ // if (numNeighbours === 1){
+ //  console.log(`Only 1 border!`);
+ // }
+ // else if(numNeighbours > 1){
+ //  console.log(`More than 1 border`);
+ // }
+ // else{
+ //  console.log(`No borders`);
+ // }
+
+ // BOOLEAN LOGIC
+ // !==, !=, !, &&, ||, ===, ==
+
+ // ASSIGNMENT LOGICAL OPERATOS
+ const island = true;
+ const wantLessPeople = 50000000;
+ const wantSpeakEnglish = true;
+     // YOU ACTUALLY DONT NEED TO WRITE GIVEN IN THIS ASSIGNMENT JUST LIKE THE ANSWER
+
+ let suggestedCountry = 'Philippines';
+ const sCIsland = false;
+ const sCSpeakEnglish = true;
+ const sCLessPeople = 40000000;
+
+ 
+ const sarahWant = ((!island === sCIsland)&&(wantLessPeople > sCLessPeople)&&(wantSpeakEnglish === sCSpeakEnglish))
+
+ // if (sarahWant === true){
+ //  console.log(`You should live in ${suggestedCountry}`);
+ // } else{
+ //  console.log(`${suggestedCountry} does not meet your criteria`);
+ // }
+
+
+// ASSIGNMENT THE SWITCH STATEMENT
+
+// THE CONDITIONAL (TERNARY) OPERATOR
