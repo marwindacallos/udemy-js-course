@@ -80,4 +80,69 @@ const age2 = calcAge2(1997);
  return (juice);
 }
 
-console.log(fruitProcessor(2,3));
+// console.log(fruitProcessor(2,3));
+
+// REVIEW FUNCTIONS
+
+const calcAge5 = function(birthYear){
+ return 2037 - birthYear;
+}
+
+const yearsUntilRetirement1 = function (birthYear, firstName) {
+  
+  const age = calcAge5(birthYear)
+  const retirement = 65 - age;
+  // return retirement;
+  
+  if (retirement > 0){
+   console.log(`${firstName} retires in ${retirement} years`);
+   return retirement;
+  } else {
+   console.log(`${firstName} has already retired 🎉`)
+   return -1
+  }
+
+  // return `${firstName} retires in ${retirement} years`
+
+ }
+// console.log(yearsUntilRetirement1(1991, 'Jonas'));
+// console.log(yearsUntilRetirement1(1950, 'Mike'));
+
+
+// ARRAYS 
+
+const friends = ['Michael', 'Steven', 'Peter']; //LITERAL SYNTAX
+
+
+// console.log(friends[1]);
+// console.log(friends[1].length);
+// console.log(friends[friends.length - 1]);
+
+friends[2] = 'Jay'
+// console.log(friends[2]);
+
+// const years = new Array(1991, 1984, 2008, 'yo', 'gurl');
+
+const firstNmae = 'Jonas';
+const jonas = [firstNmae, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+// console.log(jonas.length);
+
+// Exercise 
+const calcAge = function (birthYear){
+ return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+const ooh = calcAge(years);
+// console.log(ooh);
+const age10 = calcAge(years[0]);
+const age11 = calcAge(years[1]);
+const age12 = calcAge(years[years.length -1]);
+// console.log(age10, age11, age12);
+
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// console.log(ages);
+
+console.log(years[years.length - 1]); // - 1 is the last -2 is the second last inside the array.
+
+// console.log(age10);
+
