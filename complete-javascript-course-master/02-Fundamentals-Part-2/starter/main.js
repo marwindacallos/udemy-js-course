@@ -142,7 +142,39 @@ const age12 = calcAge(years[years.length -1]);
 // const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 // console.log(ages);
 
-console.log(years[years.length - 1]); // - 1 is the last -2 is the second last inside the array.
+// console.log(years[years.length - 1]); // - 1 is the last -2 is the second last inside the array.
 
-// console.log(age10);
+// console.log(age10);.
+ 
+
+//////////////////////////////
+//BASIC ARRAY OPERATIONS
+ 
+const friendz = ['Michael', 'Steven', 'Peter'];
+
+// Add Elements
+const newLength = friendz.push('Jay');
+// console.log(friends);
+// console.log(newLength);
+
+friendz.unshift('John'); //add first element
+// console.log(friendz);
+
+// Remove Elements
+friendz.pop(); // Last
+const popped = friendz.pop();
+// console.log(popped);
+// console.log(friendz);
+
+friendz.shift(); // First remove 
+// console.log(friendz);
+
+// console.log(friendz.indexOf('Steven')); //they index number
+// console.log(friendz.indexOf('Bob'));
+
+friendz.push('Bob'); //add to last
+// console.log(friendz.includes('Steven')); // they index boolean
+// console.log(friendz.includes('Bob'));
+// console.log(friendz);
+
 

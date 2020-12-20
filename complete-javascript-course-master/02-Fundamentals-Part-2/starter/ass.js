@@ -51,3 +51,32 @@ const myFavorite = favorites('green', 'chicken curry', 'water');
   return (pops);
  }
  // console.log(describePopulation('Finland', 13, 1441  ));
+
+ // INTRODUCTION TO ARRAY
+
+ const populations = [106.7, 1141, 50, 5.5];
+ // console.log(populations.length === 4);
+ const percentage = [
+percentageOfWorld1(populations[0]),
+percentageOfWorld1(populations[1]), 
+percentageOfWorld1(populations[2]),
+percentageOfWorld1(populations[3]),
+]
+// console.log(percentage[1]);
+
+//  BASIC ARRAY OPERATIONS (METHODS)
+// const neighbours = ['vietnam', 'indonesia', 'china'] //1
+// console.log(neighbours); 
+// neighbours.push('Utopia'); //2
+// console.log(neighbours);
+// neighbours.pop('Utopia'); //3
+// console.log(neighbours);
+// if (neighbours.includes('Germany') === false){ //4
+//  console.log(`Probably not a central European country :D`);
+// } else{
+//  console.log(`Yay a European country`);
+// }
+// neighbours[0] = 'India' //5
+// console.log(neighbours);
+
+// INTRODUCTION TO OBJECTS
