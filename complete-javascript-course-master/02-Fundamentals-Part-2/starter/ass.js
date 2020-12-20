@@ -50,4 +50,4 @@ const myFavorite = favorites('green', 'chicken curry', 'water');
   const pops = `${country} has ${population} million people which is about ${pop} of the world `;
   return (pops);
  }
- console.log(describePopulation('Finland', 13, 1441 ));
+ // console.log(describePopulation('Finland', 13, 1441  ));
