@@ -39,10 +39,10 @@ const num = Number('23'); //PIECE OF CODE THAT YOU CAN USE REPEATEDLY
 
 // FUNCTION DECLARATIONS VS EXPRESSIONS
 
-function calcAge1(birthYear){ //generic function declarations
- return 2037 - birthYear;
-}
-const age1 = calcAge1(1991); 
+// function calcAge1(birthYear){ //generic function declarations
+//  return 2037 - birthYear;
+// }
+// const age1 = calcAge1(1991); 
 // console.log(age1);
 
 const calcAge2 = function (birthYear){ //ANONYMOUS FUNCTION expressions
@@ -124,19 +124,19 @@ friends[2] = 'Jay'
 // const years = new Array(1991, 1984, 2008, 'yo', 'gurl');
 
 const firstNmae = 'Jonas';
-const jonas = [firstNmae, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+// const jonas = [firstNmae, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
 // console.log(jonas.length);
 
 // Exercise 
-const calcAge = function (birthYear){
- return 2037 - birthYear;
-}
+// const calcAge = function (birthYear){
+//  return 2037 - birthYear;
+// }
 const years = [1990, 1967, 2002, 2010, 2018];
-const ooh = calcAge(years);
+// const ooh = calcAge(years);
 // console.log(ooh);
-const age10 = calcAge(years[0]);
-const age11 = calcAge(years[1]);
-const age12 = calcAge(years[years.length -1]);
+// const age10 = calcAge(years[0]);
+// const age11 = calcAge(years[1]);
+// const age12 = calcAge(years[years.length -1]);
 // console.log(age10, age11, age12);
 
 // const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
@@ -154,7 +154,7 @@ const friendz = ['Michael', 'Steven', 'Peter'];
 
 // Add Elements
 const newLength = friendz.push('Jay');
-// console.log(friends);
+// console.log(friendz);
 // console.log(newLength);
 
 friendz.unshift('John'); //add first element
@@ -177,4 +177,89 @@ friendz.push('Bob'); //add to last
 // console.log(friendz.includes('Bob'));
 // console.log(friendz);
 
+/////////////////////////////////////////
+// INTRODUCTION TO OBJECTS
+// const jonas = {
+//  firstName: 'Jonas',
+//  lastName: 'Dacallos',
+//  age: 2037 - 2000,
+//  job: 'teacher',
+//  friends: ['Michael', 'Peter', 'Steven']
+// };
 
+// console.log(jonas.firstName);
+// console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// console.log(jonas. 'last' + nameKey);
+
+// const interestedIn = prompt(`What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends`);
+// console.log(jonas.interestedIn);
+
+// if(jonas[interestedIn]){
+//  console.log(jonas[interestedIn]);
+// } else {
+//  console.log(`Wrong Request!`);
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschedtman';
+// console.log(jonas);
+
+// CHALLENGE
+
+// const jonass = {
+//  friends: ['Michael', 'Marwin', 'Pikachu']
+// };
+// jonass.friends.Michael = 'My Best friend'
+// console.log(jonass['friends']);
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his bestfriend is called ${jonas.friends[0]}`);
+
+
+//////////////////////////// OBJECT METHODS
+
+const jonas = {
+ firstName: 'Jonas',
+ lastName: 'Dacallos',
+ age: 46,
+ birthYear: 1991,
+ job: 'teacher',
+ friends: ['Michael', 'Peter', 'Steven'],
+ hasDriverLicense: true,
+
+ // calcAge: function(birthYear){
+ //  return 2037 - birthYear;
+ // }
+
+ // calcAge: function(){
+ //  // console.log(this);
+ //  return 2037 - this.birthYear;
+ // }
+
+ calcAge: function(){
+  this.age = 2037 - this.birthYear;
+  return this.age;
+ },
+
+ getSummary: function(){
+ return `${this.firstName} a ${this.age}-years old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license`
+ }  
+};
+
+// const calcAge = function(birthYear){
+//  return 2037 - birthYear
+
+// console.log(jonas.calcAge(1991));
+// console.log(jonas['calcAge'](1991));
+// console.log(jonas.calcAge(jonas.birthYear));
+// console.log(jonas['calcAge'](jonas['birthYear']));
+// console.log(jonas.age);
+// console.log(jonas.calcAge());
+// console.log(jonas.calcAge());
+
+
+// console.log(jonas.getSummary());

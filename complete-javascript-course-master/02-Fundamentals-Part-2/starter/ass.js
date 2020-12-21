@@ -79,4 +79,60 @@ percentageOfWorld1(populations[3]),
 // neighbours[0] = 'India' //5
 // console.log(neighbours);
 
+/////////////////////////////////////////
 // INTRODUCTION TO OBJECTS
+// const myCountry = {
+//  country : 'Philippines',
+//  capital : 'NCR',
+//  language : 'Filipino',
+//  population : 106.7 ,
+//  neighbours : ['Vietnam', 'China', 'India']
+// };
+
+/////////////////////////////////////
+// RETRIEVING OBJECT AND CHANGING DATA IN OBJECT
+
+// console.log(myCountry);
+
+////////////////////////////
+// DOT VS BRACKET NOTATION
+
+// console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+
+
+// console.log(`${myCountry.population - 2}`);
+
+// myCountry['population'] += 2;
+// console.log(myCountry.population);
+
+////////////////////////////////////////// OBJECT METHODS
+
+// const myCountry = {
+//  country : 'Philippines',
+//  capital : 'NCR',
+//  language : 'Filipino',
+//  population : 106.7 ,
+//  neighbours : ['Vietnam', 'China', 'India'],
+//  describe: `${this.country} has ${this.population} million ${this.language} speaking people, ${this.neighbours} neighbouring countries and a capital called ${this.capital}.`
+// }; 
+// console.log(myCountry.describe);
+
+const myCountry = {
+ country : 'Philippines',
+ capital : 'NCR',
+ language : 'Filipino',
+ population : 106.7 ,
+ neighbours : ['Vietnam', 'China', 'India'],
+ describe: function(){ 
+  console.log(`${this.country} has ${this.population} million ${this.language} speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`)
+ },
+ 
+ checkIsland: function(){ 
+  this.isIsland = this.neighbours.length === 0 ? true : false;
+  return this.isIsland
+ }
+}; 
+
+// myCountry.describe();
+// console.log(myCountry.checkIsland());
+
