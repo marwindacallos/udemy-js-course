@@ -222,14 +222,14 @@ const nameKey = 'Name';
 
 //////////////////////////// OBJECT METHODS
 
-const jonas = {
- firstName: 'Jonas',
- lastName: 'Dacallos',
- age: 46,
- birthYear: 1991,
- job: 'teacher',
- friends: ['Michael', 'Peter', 'Steven'],
- hasDriverLicense: true,
+// const jonas = {
+//  firstName: 'Jonas',
+//  lastName: 'Dacallos',
+//  age: 46,
+//  birthYear: 1991,
+//  job: 'teacher',
+//  friends: ['Michael', 'Peter', 'Steven'],
+//  hasDriverLicense: true,
 
  // calcAge: function(birthYear){
  //  return 2037 - birthYear;
@@ -240,15 +240,15 @@ const jonas = {
  //  return 2037 - this.birthYear;
  // }
 
- calcAge: function(){
-  this.age = 2037 - this.birthYear;
-  return this.age;
- },
+//  calcAge: function(){
+//   this.age = 2037 - this.birthYear;
+//   return this.age;
+//  },
 
- getSummary: function(){
- return `${this.firstName} a ${this.age}-years old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license`
- }  
-};
+//  getSummary: function(){
+//  return `${this.firstName} a ${this.age}-years old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license`
+//  }  
+// };
 
 // const calcAge = function(birthYear){
 //  return 2037 - birthYear
@@ -263,3 +263,31 @@ const jonas = {
 
 
 // console.log(jonas.getSummary());
+
+//////////////////////////////// FOR LOOP
+
+// console.log('Lifting weights 1');
+// console.log('Lifting weights 2');
+// console.log('Lifting weights 3');
+// console.log('Lifting weights 4');
+// console.log('Lifting weights 5');
+
+// for loop keeps running while condition is true
+for(let rep = 1; rep <= 10; rep++){
+ // console.log(`Lifting weights ${rep}`);
+}
+
+/////////////////////////////////// LOOPING ARRAYS, BREAKING AND CONTINUING
+
+const jonas = [
+ 'Jonas',
+ 'Dacallos',
+ 2037 - 2000,
+ 'teacher',
+ ['Michael', 'Peter', 'Steven'],
+ true
+];
+// start at zero when using array because it's zero based
+for(let i = 0; i < jonas.length ;i++){
+ console.log(jonas[i], typeof jonas[i]);
+}
