@@ -279,48 +279,74 @@ for(let rep = 1; rep <= 10; rep++){
 
 /////////////////////////////////// LOOPING ARRAYS, BREAKING AND CONTINUING
 
+// const jonas = [
+//  'Jonas',
+//  'Dacallos',
+//  2037 - 2000,
+//  'teacher',
+//  ['Michael', 'Peter', 'Steven'],
+//  true
+// ];
+
+const types = [];
+
+// start at zero when using array because it's zero based
+// for(let i = 0; i < jonas.length ;i++){
+//  console.log(jonas[i], typeof jonas[i]);
+
+//  types [i] = typeof jonas[i]
+//  // FILLING TYPES ARRAY
+//  // types[i] = typeof jonas [i];
+//  types.push(typeof jonas[i])
+// }
+
+// console.log(types);
+
+// const yearz = [1991, 2007, 1969, 2020];
+// const agez= [];
+
+// for (let i = 0; i < years.length; i++ ){
+//  agez.push(2037 - yearz[i])
+// }
+
+// console.log(agez);
+
+// continue and break
+// console.log(`---only strings---`);
+// for(let i = 0; i < jonas.length ;i++){
+//  if(typeof jonas[i] !== 'string') continue;
+
+//  console.log(jonas[i], typeof jonas[i]);
+// }
+// console.log(`---break with number---`);
+// for(let i = 0; i < jonas.length ;i++){
+//  if(typeof jonas[i] !== 'number') break;
+
+//  console.log(jonas[i], typeof jonas[i]);
+// }
+
+///////////////////////////////////// LOOPING BACKWARDS AND LOOPS IN LOOPS
+
 const jonas = [
  'Jonas',
  'Dacallos',
  2037 - 2000,
  'teacher',
  ['Michael', 'Peter', 'Steven'],
- true
 ];
 
-const types = [];
+// 0, 1 , ... 4
+// 4, 3, ..., 0
 
-// start at zero when using array because it's zero based
-for(let i = 0; i < jonas.length ;i++){
- console.log(jonas[i], typeof jonas[i]);
-
- types [i] = typeof jonas[i]
- // FILLING TYPES ARRAY
- // types[i] = typeof jonas [i];
- types.push(typeof jonas[i])
+for(let i = jonas.length - 1; i >= 0 ; i--){
+ console.log(jonas[i]);
 }
 
-console.log(types);
+for (let exercise = 1; exercise < 4; exercise++){
+ console.log(`---------Starting exercise ${exercise}`);
 
-const yearz = [1991, 2007, 1969, 2020];
-const agez= [];
-
-for (let i = 0; i < years.length; i++ ){
- agez.push(2037 - yearz[i])
+ for (let rep= 1; rep <6; rep++){
+ console.log(`Lifting weight repetition ${rep}`);
 }
 
-console.log(agez);
-
-// continue and break
-console.log(`---only strings---`);
-for(let i = 0; i < jonas.length ;i++){
- if(typeof jonas[i] !== 'string') continue;
-
- console.log(jonas[i], typeof jonas[i]);
-}
-console.log(`---break with number---`);
-for(let i = 0; i < jonas.length ;i++){
- if(typeof jonas[i] !== 'number') break;
-
- console.log(jonas[i], typeof jonas[i]);
 }
