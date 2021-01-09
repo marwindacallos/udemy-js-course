@@ -2,7 +2,7 @@
 let js = 'amazing';
 // console.log(40 + 8 + 3 - 10); 
 
-let bot = ['hey', 'fucker']
+let bot = ['hey', 'man']
 // console.log(bot[1])
 
 let six ;
