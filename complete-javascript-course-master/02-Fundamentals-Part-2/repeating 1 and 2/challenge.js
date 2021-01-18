@@ -34,13 +34,17 @@
 // }
 
 /////////////////////////////CODING CHALLENGE #4
-
-// const bill = 275
-// let tip;
+const bill = 275
+let tip;
 // if (50 <= bill <= 300){
 //  tip = bill * .15
 // } else{
 //  tip = bill * .2
 // }
-// const totalValue = bill + tip
 // console.log(`The bill was ${bill}, the tip was ${tip} and the total value ${totalValue} `);
+50 <= bill <= 300 ? tip = bill * .15 : tip = bill * .2;
+const totalValue = bill + tip
+// console.log(`The bill was ${bill}, the tip was ${tip} and the total value ${totalValue} `);
+
+/////////////////////// PART 2
+////////////////////// CODING CHALLENGE #1
