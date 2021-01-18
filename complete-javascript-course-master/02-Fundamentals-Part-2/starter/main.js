@@ -362,11 +362,11 @@ const jonas = [
 //  rep++;
 // }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
+// let dice = Math.trunc(Math.random() * 6) + 1;
 
-while (dice !==6){
- console.log(`Your rolled a ${dice}`);
- dice = Math.trunc(Math.random() * 6) + 1;
+// while (dice !==6){
+//  console.log(`Your rolled a ${dice}`);
+//  dice = Math.trunc(Math.random() * 6) + 1;
 
- if (dice === 6) console.log(`Loop is about to end...`);
-}
+//  if (dice === 6) console.log(`Loop is about to end...`);
+// }
