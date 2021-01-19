@@ -48,3 +48,43 @@ const totalValue = bill + tip
 
 /////////////////////// PART 2
 ////////////////////// CODING CHALLENGE #1
+
+const calcAverage = (a, b, c) => (a + b +c) /3
+const dolphinAverage = calcAverage(85, 54, 41)
+const koalasAverage = calcAverage(23, 34, 27)
+
+function checkWinner (dolphinAverage, koalasAverage){
+ if (dolphinAverage > koalasAverage && dolphinAverage > koalasAverage*2){
+  console.log(`Dolphin win (${dolphinAverage} vs. ${koalasAverage})`);
+ } else if (dolphinAverage < koalasAverage && dolphinAverage*2 < koalasAverage){
+  console.log(`Koalas win (${koalasAverage} vs. ${dolphinAverage})`);
+ }
+  else{
+   console.log(`No one's win`);
+  }
+}
+ 
+// checkWinner(dolphinAverage, koalasAverage);
+
+///////////////////////////////// CODING CHALLENGE #4
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+
+function calcTip (bill){
+ if (50 <= bill, bill <= 300){
+ tip = bill * .15
+ }else{
+ tip = bill * .20
+ } 
+ return tip;
+}
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++){
+ const tip = calcTip(bills[i]);
+ tips.push(tip);
+ totals.push(tip + bills[i]);
+}
+
+console.log(bills, tips, totals);
