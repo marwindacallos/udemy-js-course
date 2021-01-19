@@ -262,4 +262,4 @@ while (i < population.length) {
  i++;
 }
 
-console.log(percentage3);
+// console.log(percentage3);
