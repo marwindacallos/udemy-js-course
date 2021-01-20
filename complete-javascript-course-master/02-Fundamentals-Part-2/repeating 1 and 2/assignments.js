@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //////////////////////////////////////////PART 1
 // VALUES AND VARIABLES
@@ -37,14 +37,14 @@
 //  console.log(`${country}'s population is ${population} million below average`);
 // }
 
-/////////////////////// TYPE CONVERSION AND COERCION 
-'9' - '5'
-'19' - '13' + '17';
-'19' - '13' + 17;
-'123' < 57;
-5 + 6 + '4' + 9 - 4 - 2;
+/////////////////////// TYPE CONVERSION AND COERCION
+"9" - "5";
+"19" - "13" + "17";
+"19" - "13" + 17;
+"123" < 57;
+5 + 6 + "4" + 9 - 4 - 2;
 
-////////////////// EQUALITY OPERATORS 
+////////////////// EQUALITY OPERATORS
 
 // const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
 // if (numNeighbours === 1){
@@ -62,7 +62,7 @@
 // const newCountry = 'Philippines';
 // const newLanguange = 'English';
 // const newPopulation = 106.7;
-// const newIsIsland = true; 
+// const newIsIsland = true;
 
 // if (newLanguange === 'English' && newPopulation < 50 && newIsIsland !== true){
 //  console.log(`You should live in ${newCountry}`);
@@ -98,8 +98,6 @@
 // const population = 10;
 // population > 33 ? console.log(`Your country's population is above average`) : console.log(`Your country's population is below average`);
 
-
-
 ///////////////////////// PART 2
 //////////////////////////FUNCTIONS
 // const country = 'Finland';
@@ -118,12 +116,11 @@
 // const description = describeCountry('Finland', 6, 'Helsinki');
 // console.log(description);
 
-
 ////////////////////////////FUNCTIONS DECLARATIONS VS.EXPRESSIONS
 // function percentageOfWorld1 (country, population){
 //  const percentage = (population/7900)*100;
 //  return `${country} has ${population} million people, so it's about ${percentage} of the world population.`
-// } //function declation 
+// } //function declation
 
 // const percentageOfWorld2 = function (country, population) {
 //  const percentage = (population/7900)*100;
@@ -166,7 +163,6 @@
 // neighbours.push('utopia') //add to last
 // neighbours.pop('utopia') //remove the last
 
-
 // if (neighbours.includes('Germany')===false){
 //  console.log(`Probably not a central European country`);
 // }
@@ -174,7 +170,6 @@
 // neighbours[neighbours.indexOf('japan')] = 'Republic of Japan'; //changing part of an array
 
 // console.log(neighbours);
-
 
 //////////////////////////////OBJECTS
 
@@ -190,7 +185,6 @@
 // myCountry['twitter'] = '@jonasschedtman'; //bracket notation
 
 // console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neigbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
-
 
 // console.log(`${myCountry.population - 2}`);
 // console.log(`${myCountry['population'] + 2}`);
@@ -216,7 +210,6 @@
 // myCountry.describe()
 // console.log(myCountry.checkIsland());
 
-
 ///////////////////////////////THE FOR LOOP
 // for (let rep = 1; rep <= 50; rep++){
 //  console.log(`Voter number ${rep} is currently voting`);
@@ -226,31 +219,30 @@
 const population = [10, 1441, 332, 83];
 
 function percentageOfWorld1(population) {
- const percentage = (population/7900)*100
- return percentage
+ const percentage = (population / 7900) * 100;
+ return percentage;
 }
 const percentage2 = [];
-for (let i = 0; i < population.length; i++){
+for (let i = 0; i < population.length; i++) {
  // if(typeof population[i] !== 'number') continue;
  // if(typeof population[i] !== 'string') break;
  const perc = percentageOfWorld1(population[i]);
  percentage2.push(perc);
 }
 
-
 // console.log(percentage2);
 
 /////////////////////////// LOOPING BACKWARDS
 
 const listOfNeighbours = [
- ['Canada', 'Mexico'], 
- ['Spain'], 
- ['Norway', 'Sweden', 'Russia']
+ ["Canada", "Mexico"],
+ ["Spain"],
+ ["Norway", "Sweden", "Russia"],
 ];
 
 for (let i = 0; i < listOfNeighbours.length; i++)
  for (let y = 0; y < listOfNeighbours[i].length; y++);
- // console.log(`Neigbour: ${listOfNeighbours[i][y]}`);
+// console.log(`Neigbour: ${listOfNeighbours[i][y]}`);
 
 ///////////////////////// WHILE LOOP
 
