@@ -87,7 +87,7 @@ for (let i = 0; i < bills.length; i++) {
  totals.push(tip + bills[i]);
 }
 
-// console.log(bills, tips, totals);
+console.log(bills, tips, totals);
 
 const calcAverage = function (arr) {
  let sum = 0;
