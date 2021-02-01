@@ -43,8 +43,38 @@ const restaurant = {
   },
 };
 
-// Rest Pattern and Parameters
+//Use ANY data type, return ANY data type
+//Short circuiting
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
 
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 23;
+
+const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
+console.log(guest1);
+
+const guest2 = restaurant.numGuest || 10;
+console.log(guest2);
+
+console.log('====AND====');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+
+//Practical Example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+/////////////////////////////////////////
+// Rest Pattern and Parameters
 // Destructuring
 
 // SPREAD, because on RIGHT side of =
@@ -52,18 +82,18 @@ const arr = [1, 2, ...[3, 4]];
 
 //REST, because on Left side of =
 const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// console.log(a, b, others);
 
 const [pizza, , rissotto, ...otherFood] = [
   ...restaurant.mainMenu,
   ...restaurant.starterMenu,
 ];
-console.log(pizza, rissotto, otherFood);
+// console.log(pizza, rissotto, otherFood);
 
 //Objects
 
 const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// console.log(weekdays);
 
 //Functions
 const add = function (...numbers) {
@@ -73,16 +103,17 @@ const add = function (...numbers) {
   console.log(sum);
 };
 
-add(2, 3);
-add(5, 3, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4);
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
 
 const x = [23, 5, 7];
-add(...x);
+// add(...x);
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-restaurant.orderPizza('mushroom', 'yo', 'noo');
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('mushroom', 'yo', 'noo');
 
+///////////////////////////////////////////
 // The Spread Operator
 // const arr = [7, 8, 9];
 // const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
@@ -128,6 +159,7 @@ restaurant.orderPizza('mushroom', 'yo', 'noo');
 // console.log(restaurantCopy.name);
 // console.log(restaurant.name);
 
+//////////////////////////////////////////////////////
 // Calling a funtion inside an object using destructuring
 
 // restaurant.orderDelivery({
