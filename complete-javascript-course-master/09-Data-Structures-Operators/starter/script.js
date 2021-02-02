@@ -1,5 +1,22 @@
 'use strict';
 
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [`day-${2 + 2}`]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -11,67 +28,143 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+  orderDelivery({ starterIndex, mainIndex, time, address }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  // ES6 enhanced object literals
+  openingHours,
+
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
 };
 
+// property NAMES
+
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+// console.log(`We are open on ${properties.length} days`);
+
+let openStr = `Wer are open on ${properties.length} days:`;
+
+for (const day of Object.keys(openingHours)) {
+  // console.log(day);
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property VALUES
+
+const values = Object.values(openingHours);
+console.log(values);
+
+//Entire Object
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+//////////////////////////////////
+//Optional Chaining
+// if (restaurant.openingHours.fri.open && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
+
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
+
+// // with optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+
+// // Example
+
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+// for (const day of days) {
+//   console.log(day);
+//   const open = restaurant.openingHours[day]?.mon ?? 'closed'; // using nullish coalescing operator
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// // console.log(otherIngredients);
+
+// // Methods
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exit');
+// console.log(restaurant.order?.orderRissotto?.(0, 1) ?? 'Method does not exit');
+
+// //Arrays
+// const users = [{ name: 'Jonas', email: 'hello$jonas.io' }];
+
+// console.log(users[0]?.name ?? 'User array empty');
+
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('User array empty');
+
+////////////////////////////////
+// Looping arrays the for-loop-of-Loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (const item of menu) console.log(item);
+
+// for (const [item] of menu.entries()) {
+//   console.log(`${item[0] + 1}: ${item[1]}`);
+// }
+
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i + 1}: ${el}`);
+// }
+
+// console.log(...menu.entries());
+
+//////////////////////////////////////////////
+// Nullish Coalescing Operator
+// Nullish: null  and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuest ?? 10;
+// console.log(guestCorrect);
+
+/////////////////////////////////////////
 //Use ANY data type, return ANY data type
 //Short circuiting
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
-console.log(true || 0);
-console.log(undefined || null);
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
 
 // console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
 restaurant.numGuests = 23;
 
 const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
-console.log(guest1);
+// console.log(guest1);
 
 const guest2 = restaurant.numGuest || 10;
-console.log(guest2);
+// console.log(guest2);
 
-console.log('====AND====');
-console.log(0 && 'Jonas');
-console.log(7 && 'Jonas');
+// console.log('====AND====');
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
 
-console.log('Hello' && 23 && null && 'jonas');
+// console.log('Hello' && 23 && null && 'jonas');
 
 //Practical Example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushroom', 'spinach');
-}
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushroom', 'spinach');
+// }
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+// restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 /////////////////////////////////////////
 // Rest Pattern and Parameters
@@ -92,7 +185,7 @@ const [pizza, , rissotto, ...otherFood] = [
 
 //Objects
 
-const { sat, ...weekdays } = restaurant.openingHours;
+// const { sat, ...weekdays } = restaurant.openingHours;
 // console.log(weekdays);
 
 //Functions
