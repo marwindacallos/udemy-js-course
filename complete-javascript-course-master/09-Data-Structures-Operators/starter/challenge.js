@@ -96,7 +96,7 @@
 // const {
 //   odds: { team1, x: draw, team2 },
 // } = game;
-// // console.log(team1, draw, team2);
+// console.log(team1, draw, team2);
 
 // //6
 // const printGoals = function (...players) {
@@ -176,3 +176,62 @@ const game = {
     team2: 6.5,
   },
 };
+
+////////////////////////////////////
+//My Trial
+
+// 1.
+// for (const [i, el] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${el}`);
+// }
+
+//2.
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+
+// console.log(team1 + draw + team2 / 3);
+
+// console.log(`${game.odds.team1}`);
+
+//3.
+
+//Make an if else statement for victory draw
+// Change the coach name whenever the team changes
+// when data is equal to draw, dont use any names
+
+// const odds = Object.entries(game.odds);
+// const teams = Object.entries(game.team1, game.team2);
+// let type = game.odds.x;
+
+// console.log(game.odds.x);
+// console.log(type);
+
+// for (const [team, draw] of odds) {
+//   if (draw === 3.25) {
+//     type = 'draw';
+//   } else {
+//     type = 'victory';
+//   }
+
+//   if (team) console.log(`Odd of ${type} ${team}, ${draw}`);
+// }
+
+// Real Answer
+
+//1.
+// console.log(`Goal ${i + 1}: ${player}`);
+
+//2.
+// for (const [i, player] of game.scored.entries())
+//   const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) average += odd;
+// average /= odds.length;
+// console.log(average);
+
+//3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+// console.log(`Odd of ${teamStr} ${odd}`);
+// }
