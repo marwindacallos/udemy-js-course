@@ -42,16 +42,69 @@ const restaurant = {
 
   // ES6 enhanced object literals
   openingHours,
-
   orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
 };
 
-//MAPS
+////////////////////////////
+// Working with String #1
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+
+///////////////////////////////
+//MAPS ITERATION
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+// console.log(question);
+
+//Convert object to map
+// console.log(Object.entries(openingHours));
+
+const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+//Iteration
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+
+// const answer = Number(prompt('Your answer'));
+// console.log(answer);
+
+// console.log(question.get(question.get('correct') === answer));
+
+//Converting map back to array
+// console.log(...question);
+// console.log(question.entries()); // same on the top
+// console.log(...question.keys());
+// console.log(...question.values());
+
+//////////////////////////////
+//MAPS FUNDAMENTALS
 
 const rest = new Map();
+
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
 rest.set(2, 'Lisbon, Portugal');
