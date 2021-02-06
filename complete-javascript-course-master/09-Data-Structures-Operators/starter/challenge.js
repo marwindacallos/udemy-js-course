@@ -298,3 +298,8 @@ const gameEvents = new Map([
 //   const half = min <= 45 ? 'FIRST' : 'SECOND';
 //   console.log(`[${half} HALF] ${min}: ${event}`);
 // }
+
+////////////////////////////////
+//Challenge #4
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
