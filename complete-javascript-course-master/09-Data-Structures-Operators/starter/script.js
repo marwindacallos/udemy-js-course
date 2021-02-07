@@ -52,14 +52,14 @@ const restaurant = {
 
 //it will create an array
 // split method
-console.log('every+nice+string'.split('+'));
-console.log('Jonas Schmedtmann'.split(' '));
+// console.log('every+nice+string'.split('+'));
+// console.log('Jonas Schmedtmann'.split(' '));
 
 const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
 
 // joining method
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+// console.log(newName);
 
 const capitalizeName = function (name) {
   const names = name.split(' ');
@@ -71,13 +71,14 @@ const capitalizeName = function (name) {
   }
   console.log(namesUpper.join(' '));
 };
-capitalizeName('jessica ann smith davis');
-capitalizeName('jonas schmedtmann');
+
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('jonas schmedtmann');
 
 //Padding a string
 const message = 'Go to gate 23!';
-console.log(message.padStart(20, '+').padEnd(30, '+'));
-console.log('Jonas'.padStart(20, '+').padEnd(30, '+'));
+// console.log(message.padStart(20, '+').padEnd(30, '+'));
+// console.log('Jonas'.padStart(20, '+').padEnd(30, '+'));
 
 const maskCreditCard = function (number) {
   const str = number + '';
@@ -86,17 +87,17 @@ const maskCreditCard = function (number) {
   return last.padStart(str.length, '*');
 };
 
-console.log(maskCreditCard(123456));
+// console.log(maskCreditCard(123456));
 
 //Repeat Method
 const message2 = 'Bad weather... All Departures Delayed...';
-console.log(message2.repeat(5));
+// console.log(message2.repeat(5));
 
 const planesInLine = function (n) {
   console.log(`There are ${n} planes in line ${'Plane'.repeat(n)}`);
 };
 
-planesInLine(5);
+// planesInLine(5);
 
 ////////////////////////////
 // Working with String #2
@@ -203,21 +204,21 @@ const checkBaggage = function (items) {
 
 // ///////////////////////////////
 // //MAPS ITERATION
-// const question = new Map([
-//   ['question', 'What is the best programming language in the world?'],
-//   [1, 'C'],
-//   [2, 'Java'],
-//   [3, 'Javascript'],
-//   ['correct', 3],
-//   [true, 'Correct'],
-//   [false, 'Try again!'],
-// ]);
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
 // console.log(question);
 
 //Convert object to map
 // console.log(Object.entries(openingHours));
 
-const hoursMap = new Map(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
 // console.log(hoursMap);
 
 //Iteration
@@ -398,10 +399,10 @@ const guestCorrect = restaurant.numGuest ?? 10;
 /////////////////////////////////////////
 //Use ANY data type, return ANY data type
 //Short circuiting
-// console.log(3 || 'Jonas');
-// console.log('' || 'Jonas');
-// console.log(true || 0);
-// console.log(undefined || null);
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
 
 // console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
