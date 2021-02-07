@@ -302,11 +302,11 @@ const gameEvents = new Map([
 ////////////////////////////////
 //Challenge #4
 
-// underscore_case; -> undersscoreCase
-// first_name;
-// Some_Variable;
-// calculate_AGE;
-// delayed_departure;
+// underscore_case // -> undersscoreCase
+// first_name
+// Some_Variable
+// calculate_AGE
+// delayed_departure
 
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
