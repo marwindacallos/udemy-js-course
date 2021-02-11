@@ -28,6 +28,7 @@ const createBooking = function (
 
 // Passing Arguments Works Value vs Reference
 
+//Passing arguments to function
 const flight = 'LH234';
 const jonas = {
   name: 'Jonas Schemdtmann',
@@ -35,8 +36,26 @@ const jonas = {
 };
 
 const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH999';
+  flightNum = 'LH999'; // not good practice
   passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 123456789) {
+    alert('Check in');
+  } else {
+    alert('Wrong passport');
+  }
 };
 
+// checkIn(flight, jonas);
+// console.log(flight);
+// console.log(jonas);
+
+// const flightNum = flight;
+// const passenger = jonas;
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 1000000000);
+};
+
+newPassport(jonas);
 checkIn(flight, jonas);
