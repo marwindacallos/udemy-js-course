@@ -273,6 +273,8 @@ booker();
 console.dir(booker);
 */
 
+/*
+///////////////////////////////
 //More closure example
 
 //Example 1
@@ -315,3 +317,5 @@ const boadPassengers = function (n, wait) {
 
 const perGroup = 1000;
 boadPassengers(100, 3);
+
+*/
