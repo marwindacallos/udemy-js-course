@@ -61,6 +61,48 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+// Creating DOM Elements
+
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+  //.textContent = 0
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+     <div class="movements__row">
+      <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+      <div class="movements__value">${mov}</div>
+     </div>
+`;
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
+displayMovements(account1.movements);
+
+// console.log(containerMovements.innerHTML);
+
+///////////////////////////////////////
+//Computing Usernames
+
+const user = 'Steven Thomas Williams'; // stw
+
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+console.log(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -158,4 +200,43 @@ console.log(currenciesUniques);
 currenciesUniques.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+*/
+
+/*
+////////////////////////////
+//Map Method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov){
+//  return mov * eurToUsd
+// })
+
+// Arrow Function
+// const movementsUSDArr = mov => mov * eurToUsd;
+// const movementsUSD = movements.map.movementsUSDArr;
+const movementsUSD = movements.map(mov => mov * eurToUsd);
+
+console.log(movements);
+console.log(movementsUSD);
+
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+console.log(movementsUSDfor);
+
+const movementsDescriptions = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+  // if (mov > 0) {
+  //   console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  // } else {
+  //   console.log(`Movement ${i + 1}: You witdrew ${Math.abs(mov)}`);
+  // }
+);
+
+// console.log(movementsDescriptions);
 */
