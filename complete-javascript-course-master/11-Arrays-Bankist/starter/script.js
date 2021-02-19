@@ -80,10 +80,13 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-
 displayMovements(account1.movements);
 
-// console.log(containerMovements.innerHTML);
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcDisplayBalance(account1.movements);
 
 ///////////////////////////////////////
 //Computing Usernames
@@ -101,13 +104,12 @@ const createUsernames = function (accs) {
 };
 
 createUsernames(accounts);
-console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -240,3 +242,55 @@ const movementsDescriptions = movements.map(
 
 // console.log(movementsDescriptions);
 */
+
+/*
+/////////////////////////////////////
+// FILTER METHOD
+
+
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(movements);
+console.log(deposits);
+
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
+
+// const withrawals = movements.filter(function (mov) {
+//   return mov < 0;
+// });
+
+const withrawalsArr = movements.filter(mov => mov < 0);
+
+console.log(withrawalsArr);
+*/
+
+///////////////////////////////////////////
+// Reduce methods
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const balance = movements.reduce(function (acc, cur, i, arr) {
+//   console.log(`Iteration ${i}: ${acc}`);
+//   return acc + cur;
+// }, 0);
+// console.log(balance);
+
+// const balanceArr = movements.reduce(acc, cur => acc + cur, 0);
+// console.log(balanceArr);
+
+// let balance2 = 0;
+// for (const mov of movements) balance2 += mov;
+// console.log(balance2);
+
+// MAXIMUM VALUE
+
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+
+console.log(max);
