@@ -294,3 +294,23 @@ const max = movements.reduce((acc, mov) => {
 }, movements[0]);
 
 console.log(max);
+
+const eurToUsd = 1.1;
+console.log(movements);
+
+////////////////////////////
+// CHAINING METHODS
+
+// movements.filter;
+
+//PIPELINE
+
+const totalDepositsUSD = movements
+  .filter(mov => mov < 0)
+  .map((mov, i, arr) => {
+    console.log(arr);
+    return mov * eurToUsd;
+  })
+  // .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
