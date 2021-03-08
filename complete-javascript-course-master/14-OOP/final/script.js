@@ -644,4 +644,3 @@ rivian
 
 console.log(rivian.speedUS);
 */
-
